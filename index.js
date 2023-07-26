@@ -16,3 +16,25 @@ function positiveSum(arr) {
   console.log(sum);
 }
 positiveSum([2, -5, 10, -3, 7] )
+
+
+//problem - 3
+function findMostFrequentElement(arr) {
+  const frequencyMap = arr.reduce((map, element) => {
+    map.set(element, (map.get(element) || 0) + 1);
+    return map;
+  }, new Map());
+
+  let mostFrequentElement;
+  let maxFrequency = 0;
+
+  frequencyMap.forEach((frequency, element) => {
+    if (frequency > maxFrequency) {
+      mostFrequentElement = element;
+      maxFrequency = frequency;
+    }
+  });
+
+  return console.log(mostFrequentElement);
+}
+findMostFrequentElement([3, 5, 2, 5, 3, 3, 1, 4, 5])
