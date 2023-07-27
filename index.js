@@ -52,3 +52,28 @@ function findTwoIndices(arr, target) {
 }
 
 findTwoIndices([1, 3, 6, 8, 11, 15], 9);
+
+
+
+//problem - 5
+function calculate(num1, operator, num2) {
+  switch (operator) {
+    case '+':
+      return console.log(num1 + num2);
+    case '-':
+      return console.log(num1 - num2);
+    case '*':
+      return console.log(num1 * num2);
+    case '/':
+      if (num2 === 0) {
+        return console.log("Cannot divide by zero.");
+      }
+      return console.log(num1 / num2);
+    default:
+      return console.log("Invalid operator. Please use +, -, *, or /.");
+  }
+}
+calculate(100, "/", 3);
+
+
+
